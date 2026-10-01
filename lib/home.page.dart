@@ -11,32 +11,32 @@ class HomePage extends StatelessWidget {
 
       // AppBar
       appBar: AppBar(
-        title: Text("HOME PAGE"),
-        backgroundColor: const Color.fromARGB(255, 39, 87, 176),
+        title: const Text("MY HOME"),
+        backgroundColor: const Color.fromARGB(255, 63, 81, 181),
 
-        leading: Icon(Icons.home),
+        leading: const Icon(Icons.menu),
 
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
           ),
 
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.settings),
+            icon: const Icon(Icons.person),
           ),
 
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.notifications),
+            icon: const Icon(Icons.notifications_none),
           ),
         ],
       ),
 
       // Body
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(18.0),
 
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -46,55 +46,60 @@ class HomePage extends StatelessWidget {
             // Search Bar
             TextField(
               decoration: InputDecoration(
-                hintText: "Search here...",
-                prefixIcon: Icon(Icons.search),
+                hintText: "Search something...",
+                prefixIcon: const Icon(Icons.search),
+                suffixIcon: const Icon(Icons.clear),
 
-                suffixIcon: Icon(Icons.mic),
+                filled: true,
+                fillColor: Colors.grey.shade100,
 
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(12),
                 ),
               ),
             ),
 
-            const SizedBox(height: 25),
+            const SizedBox(height: 22),
 
-            // Welcome Text
+            // Greeting Text
             Text(
-              "How are you peoples??",
+              "Hello Everyone!",
               style: GoogleFonts.lobster(
-                textStyle: TextStyle(
-                  fontSize: 24,
-                  color: const Color.fromARGB(255, 39, 87, 176),
+                textStyle: const TextStyle(
+                  fontSize: 26,
+                  color: Color.fromARGB(255, 63, 81, 181),
                 ),
               ),
             ),
 
-            const SizedBox(height: 20),
+            const SizedBox(height: 18),
 
             // Welcome Card
             Card(
-              elevation: 5,
+              elevation: 4,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+              ),
 
               child: Padding(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(18),
 
                 child: Row(
                   children: [
 
-                    Icon(
-                      Icons.favorite,
-                      size: 45,
-                      color: Colors.red,
+                    const Icon(
+                      Icons.waving_hand,
+                      size: 42,
+                      color: Colors.amber,
                     ),
 
                     const SizedBox(width: 15),
 
-                    Text(
-                      "Welcome to my Home Page!",
+                    const Text(
+                      "Nice to see you here!",
                       style: TextStyle(
                         fontSize: 18,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
                   ],
@@ -104,9 +109,9 @@ class HomePage extends StatelessWidget {
 
             const SizedBox(height: 25),
 
-            // Icons Section
-            Text(
-              "Quick Options",
+            // Options Section
+            const Text(
+              "Explore Options",
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -116,51 +121,55 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 15),
 
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
               children: [
 
                 Column(
                   children: [
-                    Icon(
-                      Icons.person,
-                      size: 40,
-                      color: Colors.blue,
+                    const Icon(
+                      Icons.account_circle,
+                      size: 42,
+                      color: Colors.indigo,
                     ),
-                    Text("Profile"),
+                    const SizedBox(height: 5),
+                    const Text("Account"),
                   ],
                 ),
 
                 Column(
                   children: [
-                    Icon(
-                      Icons.message,
-                      size: 40,
-                      color: Colors.green,
+                    const Icon(
+                      Icons.chat,
+                      size: 42,
+                      color: Colors.teal,
                     ),
-                    Text("Message"),
+                    const SizedBox(height: 5),
+                    const Text("Chat"),
                   ],
                 ),
 
                 Column(
                   children: [
-                    Icon(
-                      Icons.photo,
-                      size: 40,
-                      color: Colors.orange,
+                    const Icon(
+                      Icons.image,
+                      size: 42,
+                      color: Colors.deepOrange,
                     ),
-                    Text("Photos"),
+                    const SizedBox(height: 5),
+                    const Text("Gallery"),
                   ],
                 ),
 
                 Column(
                   children: [
-                    Icon(
-                      Icons.info,
-                      size: 40,
-                      color: Colors.purple,
+                    const Icon(
+                      Icons.help_outline,
+                      size: 42,
+                      color: Colors.deepPurple,
                     ),
-                    Text("About"),
+                    const SizedBox(height: 5),
+                    const Text("Help"),
                   ],
                 ),
               ],
